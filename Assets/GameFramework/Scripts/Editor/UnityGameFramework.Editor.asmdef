@@ -2,7 +2,9 @@
     "name": "UnityGameFramework.Editor",
     "rootNamespace": "",
     "references": [
-        "HotFix"
+        "HotFix",
+        "GameFramework",
+        "UnityGameFramework"
     ],
     "includePlatforms": [
         "Editor"

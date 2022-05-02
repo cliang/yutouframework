@@ -18,8 +18,19 @@ public class LoadDll : MonoBehaviour
 
     private void LoadGameDll()
     {
-        AssetBundle dllAB = BetterStreamingAssets.LoadAssetBundle("script");
 #if !UNITY_EDITOR
+        AssetBundle dllAB;
+        string scriptPath = Path.Combine(Application.persistentDataPath, "script");
+        if (File.Exists(scriptPath))
+        {
+            Debug.LogError("load script from persistentDataPath");
+            dllAB = AssetBundle.LoadFromFile(scriptPath);
+        }
+        else
+        {
+            Debug.LogError("load script from StreamingAssets");
+            dllAB = BetterStreamingAssets.LoadAssetBundle("script");
+        }
         TextAsset dllBytes1 = dllAB.LoadAsset<TextAsset>("HotFix.dll.bytes");
         gameAss = System.Reflection.Assembly.Load(dllBytes1.bytes);
 #else

@@ -15,6 +15,16 @@ namespace GameFrameworkExample
             Log.Info(welcomeMessage);
             Log.Warning(welcomeMessage);
             Log.Error(welcomeMessage);
+
+            SettingComponent m_SettingComponent = GameEntry.GetComponent<SettingComponent>();
+            if (m_SettingComponent == null)
+            {
+                Log.Fatal("Setting component is invalid.");
+                return;
+            }
+
+            float m_LastIconX = m_SettingComponent.GetFloat("Debugger.Icon.X", 0.1f);
+
         }
     }
 }

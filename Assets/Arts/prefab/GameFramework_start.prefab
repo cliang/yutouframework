@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 433714}
   - component: {fileID: 11499388}
   - component: {fileID: 11463816}
-  - component: {fileID: -5476804561300745788}
+  - component: {fileID: 2966407481339483260}
   m_Layer: 0
   m_Name: GameFramework_start
   m_TagString: Untagged
@@ -321,12 +321,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EditorResourceMode: 1
-  m_EditorLanguage: 0
+  m_EditorLanguage: 8
   m_VersionHelperTypeName: UnityGameFramework.Runtime.DefaultVersionHelper
   m_LogHelperTypeName: Tutorial.FileLogHelper
   m_CompressionHelperTypeName: UnityGameFramework.Runtime.DefaultCompressionHelper
   m_JsonHelperTypeName: UnityGameFramework.Runtime.DefaultJsonHelper
-  m_FrameRate: 30
+  m_FrameRate: 40
   m_GameSpeed: 1
   m_RunInBackground: 1
   m_NeverSleep: 1
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_LoadAssetCountPerFrame: 1
   m_MinLoadAssetRandomDelaySeconds: 0
   m_MaxLoadAssetRandomDelaySeconds: 0
---- !u!114 &-5476804561300745788
+--- !u!114 &2966407481339483260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
