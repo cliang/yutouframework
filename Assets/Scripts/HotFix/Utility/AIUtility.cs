@@ -19,7 +19,7 @@ namespace StarForce
     public static class AIUtility
     {
         private static Dictionary<CampPair, RelationType> s_CampPairToRelation = new Dictionary<CampPair, RelationType>();
-        private static Dictionary<KeyValuePair<CampType, RelationType>, CampType[]> s_CampAndRelationToCamps = new Dictionary<KeyValuePair<CampType, RelationType>, CampType[]>();
+        private static Dictionary<string, CampType[]> s_CampAndRelationToCamps = new Dictionary<string, CampType[]>();
 
         static AIUtility()
         {
@@ -84,9 +84,10 @@ namespace StarForce
         /// <returns>满足条件的阵营数组。</returns>
         public static CampType[] GetCamps(CampType camp, RelationType relation)
         {
-            KeyValuePair<CampType, RelationType> key = new KeyValuePair<CampType, RelationType>(camp, relation);
+            //KeyValuePair<CampType, RelationType> key = new KeyValuePair<CampType, RelationType>(camp, relation);
+            string keyStr = camp + "-" + relation;
             CampType[] result = null;
-            if (s_CampAndRelationToCamps.TryGetValue(key, out result))
+            if (s_CampAndRelationToCamps.TryGetValue(keyStr, out result))
             {
                 return result;
             }
@@ -105,7 +106,7 @@ namespace StarForce
 
             // TODO: GC Alloc
             result = camps.ToArray();
-            s_CampAndRelationToCamps[key] = result;
+            s_CampAndRelationToCamps[keyStr] = result;
 
             return result;
         }
@@ -187,7 +188,7 @@ namespace StarForce
         }
 
         [StructLayout(LayoutKind.Auto)]
-        private struct CampPair
+        private class CampPair
         {
             private readonly CampType m_First;
             private readonly CampType m_Second;

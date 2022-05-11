@@ -31,6 +31,15 @@ public class App
         {
             Debug.LogError("Exception£º" + exception.ToString());
         }
+
+        //var stacktrace = new StackTrace();
+        //string info = "trace back:\n";
+        //for (var i = 0; i < stacktrace.FrameCount; i++)
+        //{
+        //    var method = stacktrace.GetFrame(i).GetMethod();
+        //    info += "\t" + method.ReflectedType.FullName + "." + method.Name + "\n";
+        //}
+
         return 0;
     }
 

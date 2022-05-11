@@ -126,6 +126,7 @@ namespace HuaTuo
             var hotfixDlls = new List<string>()
             {
                 "HotFix.dll",
+                "HotFix.pdb",
             };
 
             foreach(var dll in hotfixDlls)

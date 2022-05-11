@@ -31,8 +31,9 @@ public class LoadDll : MonoBehaviour
             Debug.LogError("load script from StreamingAssets");
             dllAB = BetterStreamingAssets.LoadAssetBundle("script");
         }
-        TextAsset dllBytes1 = dllAB.LoadAsset<TextAsset>("HotFix.dll.bytes");
-        gameAss = System.Reflection.Assembly.Load(dllBytes1.bytes);
+        TextAsset dllBytes = dllAB.LoadAsset<TextAsset>("HotFix.dll.bytes");
+        TextAsset pdbBytes = dllAB.LoadAsset<TextAsset>("HotFix.pdb.bytes");
+        gameAss = System.Reflection.Assembly.Load(dllBytes.bytes, pdbBytes.bytes);
 #else
         gameAss = AppDomain.CurrentDomain.GetAssemblies().First(assembly => assembly.GetName().Name == "HotFix");
 #endif

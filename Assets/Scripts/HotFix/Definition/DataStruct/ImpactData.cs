@@ -10,12 +10,12 @@ using System.Runtime.InteropServices;
 namespace StarForce
 {
     [StructLayout(LayoutKind.Auto)]
-    public struct ImpactData
+    public class ImpactData
     {
-        private readonly CampType m_Camp;
-        private readonly int m_HP;
-        private readonly int m_Attack;
-        private readonly int m_Defense;
+        private CampType m_Camp;
+        private int m_HP;
+        private int m_Attack;
+        private int m_Defense;
 
         public ImpactData(CampType camp, int hp, int attack, int defense)
         {
