@@ -314,6 +314,7 @@ namespace GameFramework.Resource
                             {
                                 dependencyAssetNames[index++] = assets[dependencyAssetIndex].Name;
                             }
+
                             m_ResourceManager.m_AssetInfos.Add(asset.Name, new AssetInfo(asset.Name, resourceName, dependencyAssetNames));
                         }
 

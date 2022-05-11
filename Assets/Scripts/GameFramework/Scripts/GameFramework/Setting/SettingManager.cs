@@ -41,8 +41,6 @@ namespace GameFramework.Setting
             }
         }
 
-        public ISettingHelper SettingHelper { get => m_SettingHelper; set => m_SettingHelper = value; }
-
         /// <summary>
         /// 游戏配置管理器轮询。
         /// </summary>

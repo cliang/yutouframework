@@ -23,12 +23,6 @@ namespace GameFramework.Setting
             get;
         }
 
-        ISettingHelper SettingHelper 
-        { 
-            get; 
-            set; 
-        }
-
         /// <summary>
         /// 设置游戏配置辅助器。
         /// </summary>
