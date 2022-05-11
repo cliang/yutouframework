@@ -21,7 +21,6 @@ public class RefTypes : MonoBehaviour
         {
         };
     }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -432,7 +431,7 @@ public class RefTypes : MonoBehaviour
             new ValueTuple<IntEnum, object, int>(IntEnum.A, null, 1),
             new ValueTuple<IntEnum, object, long>(IntEnum.A, null, 1),
             new ValueTuple<IntEnum, object, float>(IntEnum.A, null, 1f),
-            new ValueTuple<IntEnum, object, double>(IntEnum.A, null, 1)
+            new ValueTuple<IntEnum, object, double>(IntEnum.A, null, 1),
         };
     }
 

@@ -47,7 +47,7 @@ public class ConsoleToSceen : MonoBehaviour
     private void Awake()
     {
         sss = new GUIStyle();
-        sss.fontSize = 15;
+        sss.fontSize = 10;
     }
 
     void OnGUI()

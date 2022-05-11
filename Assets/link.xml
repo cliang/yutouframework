@@ -4,6 +4,7 @@
 	<assembly fullname="Unity.NGUI" preserve="all" />
 	<assembly fullname="Unity.ThirdParty" preserve="all" />
 	<assembly fullname="System" preserve="all" />
+	<assembly fullname="System.Xml" preserve="all" />
 	<assembly fullname="UnityEngine" preserve="all" />
 	<assembly fullname="UnityEngine.CoreModule" preserve="all" />
 	<assembly fullname="Assembly-CSharp" preserve="all" />
@@ -20,6 +21,7 @@
 		<type fullname="UnityEngine.ParticleSystem+EmissionModule" preserve="all" />
 	</assembly>
 	<assembly fullname="UnityEngine.AnimationModule">
+		<type fullname="UnityEngine.Animation" preserve="all" />
 		<type fullname="UnityEngine.Animator" preserve="all" />
 		<type fullname="UnityEngine.AnimationClip" preserve="all" />
 		<type fullname="UnityEngine.RuntimeAnimatorController" preserve="all" />
@@ -95,4 +97,7 @@
 	<assembly fullname="UnityEngine.AudioModule" preserve="all"/>
 	<assembly fullname="UnityEngine.IMGUIModule" preserve="all"/>
 	<assembly fullname="UnityEngine.AssetBundleModule" preserve="all"/>
+	<assembly fullname="protobuf-net" preserve="all"/>
+	<assembly fullname="UnityGameFramework" preserve="all"/>
+	<assembly fullname="LitJson" preserve="all"/>
 </linker>

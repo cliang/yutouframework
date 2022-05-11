@@ -25,7 +25,7 @@ public class App
                 Debug.LogError("load prefab from StreamingAssets");
                 dllAB = BetterStreamingAssets.LoadAssetBundle("prefab");
             }
-            GameObject testPrefab = GameObject.Instantiate(dllAB.LoadAsset<UnityEngine.GameObject>("GameFramework_start.prefab"));
+            GameObject testPrefab = GameObject.Instantiate(dllAB.LoadAsset<UnityEngine.GameObject>("GameFramework.prefab"));
         }
         catch (Exception exception)
         {
